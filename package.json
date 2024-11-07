@@ -1,6 +1,6 @@
 {
-  "main": "index.js",  // Specifies the main entry point of your application
-  "type": "module",    // Set to module if you're using ES modules (import/export)
+  "main": "index.js",
+  "type": "module",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
