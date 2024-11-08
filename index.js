@@ -2,11 +2,42 @@ import express from 'express';
 import mongoose from 'mongoose';
 import Event from './event.js'; // Use ".js" extension if required in ES modules
 
+import express from 'express';
+import mongoose from 'mongoose';
+import Event from './event.js';
+
+const app = express();
+
+app.listen(1700, () => {
+  console.log('Server running on port 1700');
+});
+
+// Example endpoint
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// Handle uncaught exceptions and unhandled promise rejections
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught exception:', err);
+  process.exit(1);  // Exit the process after logging the error
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('Unhandled rejection:', err);
+  process.exit(1);  // Exit the process after logging the error
+});
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://joshnamula2005:P6zUzRE5VBiNXnqz@cluster0.rrurj.mongodb.net/')
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.log(err));
+    .then(() => {
+    console.log('MongoDB connected');
+  })
+  .catch((err) => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1);  // Exit on database connection failure
+  });
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
