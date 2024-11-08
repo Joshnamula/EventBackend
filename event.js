@@ -472,3 +472,4 @@ Event.insertMany([
 ])
 
 module.exports = Event;
+export default Event;
