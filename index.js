@@ -36,7 +36,7 @@ mongoose.connect('mongodb+srv://joshnamula2005:P6zUzRE5VBiNXnqz@cluster0.rrurj.m
   });
 
 
-const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
@@ -61,7 +61,4 @@ app.post('/events/delete/:id', async (req, res) => {
     res.redirect('/');  // Redirect to the home page to show the updated list
 });
 
-// Listen on the specified port
-app.listen(1700, () => {
-    console.log('Server running on port 1700');
-});
+
