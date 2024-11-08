@@ -52,7 +52,7 @@
 // app.listen(1700, () => {
 //     console.log('Server running on port 1700');
 // });
-const express = require('express');
+import express from 'express';
 const mongoose = require('mongoose');
 const Event = require('./Event'); 
 
