@@ -2,9 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import Event from './event.js'; // Use ".js" extension if required in ES modules
 
-import express from 'express';
-import mongoose from 'mongoose';
-import Event from './event.js';
 
 const app = express();
 
