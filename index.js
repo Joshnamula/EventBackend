@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import Event from './Event.js'; // Use ".js" extension if required in ES modules
+import Event from './event.js'; // Use ".js" extension if required in ES modules
+
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://joshnamula2005:P6zUzRE5VBiNXnqz@cluster0.rrurj.mongodb.net/')
